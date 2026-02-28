@@ -4,7 +4,7 @@ import com.nikhilsable.weatherservice.entity.Weather;
 import com.nikhilsable.weatherservice.repository.WeatherRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import java.util.List;
 
 @Service
 public class WeatherService {
@@ -16,13 +16,16 @@ public class WeatherService {
     }
 
     public String getWeatherByCity(String city) {
-
-        System.out.println("Fetching data from DB: " + city);
-
-        Optional<Weather> weather = weatherRepository.findByCity(city);
-
-        return weather
+        return weatherRepository.findByCity(city)
                 .map(Weather::getForecast)
                 .orElse("Weather data not available");
+    }
+
+    public Weather saveWeather(Weather weather) {
+        return weatherRepository.save(weather);
+    }
+
+    public List<Weather> getAllWeather() {
+        return weatherRepository.findAll();
     }
 }
