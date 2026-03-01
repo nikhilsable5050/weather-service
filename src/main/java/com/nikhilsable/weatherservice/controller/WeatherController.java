@@ -35,4 +35,8 @@ public class WeatherController {
     public List<Weather> getAllWeather() {
         return weatherService.getAllWeather();
     }
+    @GetMapping("/health")
+    public String getHealth(){
+        return "healthy";
+    }
 }
