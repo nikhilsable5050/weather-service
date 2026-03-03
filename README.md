@@ -1,11 +1,12 @@
 # 🌦 Weather Service API
 
-A production-style Weather Service built using Spring Boot with JWT authentication, caching, and role-based security.
+Production-ready Weather Service built with Spring Boot featuring JWT authentication, Google OAuth2 login, caching, and role-based security.
 
 ## 🚀 Features
 - RESTful APIs
 - JWT Authentication
-- Role-based Authorization
+- Google OAuth2 Login
+- Role-based Authorization (USER / ADMIN)
 - Caching (Caffeine / Redis)
 - Custom Logging Filter
 - External Weather API Integration
@@ -15,6 +16,7 @@ A production-style Weather Service built using Spring Boot with JWT authenticati
 - Java 21
 - Spring Boot
 - Spring Security
+- OAuth2
 - MySQL
 - JWT
 - Caffeine / Redis
